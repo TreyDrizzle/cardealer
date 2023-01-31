@@ -24,5 +24,7 @@ urlpatterns = [
     path('',home,name='home'),
     path('addInForum/',addInForum,name='addInForum'),
     path('addInDiscussion/',addInDiscussion,name='addInDiscussion'),
-     path('registration/', registrationRequest, name='registration')
+    path('registration/', registrationRequest, name='registration'),
+    path('', registrationRequest,  name='index'),
 ]
+

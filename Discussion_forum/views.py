@@ -67,7 +67,7 @@ def registrationRequest(request):
             user.is_staff=True
             user.save()  
             login(request, user)
-            return redirect("index")
+            return redirect("templates/index.html")
         else:
             messages.warning(request, "The user already exists.")
             return redirect("registration")

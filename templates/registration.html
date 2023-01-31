@@ -2,13 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% load static %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <form action="{% url 'djangoapp:registration' %}" method="post">
   <div class="container">
-    {% csrf_token %}
     <h1>Sign Up</h1>
     <hr>
       <div class="form-group">
@@ -27,8 +25,6 @@
       {% if messages %}
           {% for message in messages %}
               <div class="alert alert-warning" role="alert">{{ message }}</div>
-          {% endfor %}
-      {% endif %}
   </div>
 </form>
 </body>
